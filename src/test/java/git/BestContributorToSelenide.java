@@ -1,7 +1,5 @@
-package github;
+package git;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -21,7 +19,6 @@ public class BestContributorToSelenide {
                 $$("ul li").first().hover();
         // check that pop-up window include the text "Andrei Solntsev"
         $$(".Popover").findBy(visible).shouldHave(text("Andrei Solntsev"));
-
         sleep(5000);
     }
 }
