@@ -10,14 +10,16 @@ public class SoftAssertionsSearch {
     @Test
     void softAssertionsInDropDownExistCheck () {
 
-        // open page with repository of selenide
+        // Open page with selenide repository
         open("https://github.com/selenide/selenide");
-        //move to wiki and click
+
+        // Move to wiki and click
         $("#wiki-tab").click();
-        //find right menu and click the drop-down menu "Show 2 more pages…"
+
+        // Find right menu and click the drop-down menu "Show 2 more pages…"
         $(".wiki-more-pages-link").$("[type=button]").click();
-        //find menu element "SoftAssertions" and check the spelling of the name of this element
+
+        // Find menu element "SoftAssertions" and check the spelling of the name of this element
         $$(".Box-row").get(16).shouldHave(text("SoftAssertion"));
-        sleep(5000);
     }
 }
