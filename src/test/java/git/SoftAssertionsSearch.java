@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class SoftAssertionsSearch {
 
     @Test
-    void softAssertionsCheck () {
+    void softAssertionsInDropDownExistCheck () {
 
         // open page with repository of selenide
         open("https://github.com/selenide/selenide");
